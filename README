@@ -1,0 +1,49 @@
+Labyrinth::Plugin::WikUser Contributed Perl DocumentLabyrinth::Plugin::Wiki(3)
+
+
+
+NAME
+       Labyrinth::Plugin::Wiki - Wiki handler for Labyrinth framework.
+
+DESCRIPTION
+       Contains all the wiki handling functionality for Labyrinth.
+
+PUBLIC INTERFACE METHODS
+       Page
+       Edit
+       View
+       Save
+       History
+       Diff
+       Search
+       Recent
+
+ADMIN INTERFACE METHODS
+       Admin
+       Rollback
+       Delete
+       Locks
+
+INTERNAL METHODS
+       CheckPage
+       GetPage
+       RestrictedPage
+       LockedPage
+
+SEE ALSO
+       Labyrinth
+
+AUTHOR
+       Barbie, <barbie@missbarbell.co.uk> for Miss Barbell Productions,
+       <http://www.missbarbell.co.uk/>
+
+COPYRIGHT & LICENSE
+         Copyright (C) 2002-2011 Barbie for Miss Barbell Productions
+         All Rights Reserved.
+
+         This module is free software; you can redistribute it and/or
+         modify it under the Artistic License 2.0.
+
+
+
+perl v5.10.1                      2011-01-18        Labyrinth::Plugin::Wiki(3)
