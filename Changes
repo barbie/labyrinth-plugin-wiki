@@ -1,4 +1,9 @@
 Changes for the Labyrinth-Plugin-Wiki
 
+1.01	08/05/2011
+	- cleaned up phrasebook.ini.
+	- URL pattern match fixes.
+	- WikiLink now only checks whether a linked page exists.
+
 1.00	19/01/2011
 	- first official release

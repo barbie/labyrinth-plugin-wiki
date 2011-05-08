@@ -4,11 +4,11 @@ use warnings;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 =head1 NAME
 
-Labyrinth::Plugin::Wiki - Wiki handler for Labyrinth framework.
+Labyrinth::Plugin::Wiki - Wiki handler for the Labyrinth framework.
 
 =head1 DESCRIPTION
 

@@ -4,7 +4,7 @@ use warnings;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 =head1 NAME
 
@@ -86,7 +86,7 @@ sub InitLinkPatterns {
   my $UpperLetter = '[A-Z\xc0-\xde]';
   my $LowerLetter = '[a-z\xdf-\xff]';
   my $AnyLetter   = '[A-Za-z\xc0-\xff_0-9\$]';
-  my $AnyString   = '[A-Za-z\xc0-\xff_0-9 \-\&\'~.,\?\(\)\"!\$]';
+  my $AnyString   = '[A-Za-z\xc0-\xff_0-9 \-\&\'~.,\?\(\)\"!\$:]';
 
   # Main link pattern: lowercase between uppercase, then anything
   my $LpA = $UpperLetter . $AnyLetter . "*";
@@ -244,7 +244,7 @@ sub WikiLink {
     }
 
     $wiki_links{$page} ||= do {
-        my @rows = $dbi->GetQuery('hash','GetWikiPage',$page);
+        my @rows = $dbi->GetQuery('hash','CheckWikiPage',$page);
         @rows ? 1 : 0;
     };
 
