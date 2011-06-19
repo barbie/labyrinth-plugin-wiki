@@ -4,7 +4,7 @@ use warnings;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 =head1 NAME
 
@@ -66,19 +66,35 @@ my %valid_limits = map {$_ => 1} qw(10 20 50 100 200 500);
 
 =item Page
 
+Checks for alternative page references and redirects if necessary.
+
 =item Edit
+
+Provides the edit page for the given page.
 
 =item View
 
+Provides the view page for the given page.
+
 =item Save
+
+Saves the given page.
 
 =item History
 
+Provides the history of edits for the given page.
+
 =item Diff
+
+Provides the differences between to versions of the given page.
 
 =item Search
 
+Searches through the current set of pages for the given text string.
+
 =item Recent
+
+Lists the most recent changes.
 
 =back
 
@@ -361,11 +377,19 @@ sub _get_token {
 
 =item Admin
 
+Checks whether user has admin priviledges.
+
 =item Rollback
+
+Rollbacks the given page by one version.
 
 =item Delete
 
+Deletes the given page.
+
 =item Locks
+
+Locks or unlocks the given page.
 
 =back
 
@@ -409,11 +433,19 @@ sub Locks {
 
 =item CheckPage
 
+Checks the page exists.
+
 =item GetPage
+
+Retrieves the page content for a given version or current page.
 
 =item RestrictedPage
 
+Checks whether the page is restricted.
+
 =item LockedPage
+
+Checks whether the page is locked.
 
 =back
 
@@ -461,7 +493,6 @@ sub RestrictedPage {
 
 sub LockedPage {
     if( $tvars{wikihash}->{locked} ) {
-
         $tvars{errcode} = 'MESSAGE';
         $tvars{errmess} = 'This page is locked.';
         return 1;

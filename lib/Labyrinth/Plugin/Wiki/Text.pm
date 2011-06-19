@@ -4,7 +4,7 @@ use warnings;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 =head1 NAME
 
@@ -38,9 +38,9 @@ my ($LinkPattern,$SitePattern,$UrlPattern,$UriPattern,$MailPattern,$SendPattern)
 
 # HTML tag lists
                     # Single tags (that do not require a closing /tag)
-my @HtmlSingle =    qw(br p hr li dt dd tr td th);
+my @HtmlSingle =    qw(br hr);
                     # Tags that must be in <tag> ... </tag> pairs:
-my @HtmlPairs  = (  qw(b i u h1 h2 h3 h4 h5 h6 code em strike strong blockquote ol ul),
+my @HtmlPairs  = (  qw(b i p u h1 h2 h3 h4 h5 h6 code em strike strong blockquote ol ul li dt dd tr td th),
                     @HtmlSingle);  # All singles can also be pairs
 
 # -------------------------------------
@@ -52,15 +52,27 @@ my @HtmlPairs  = (  qw(b i u h1 h2 h3 h4 h5 h6 code em strike strong blockquote 
 
 =item Render
 
+Controls the process of rendering a given page.
+
 =item InitLinkPatterns
+
+Prepares patterns used to translate wiki links into HTML links.
 
 =item Wiki2HTML
 
+Translate WikiFormat into XHTML.
+
 =item CommonMarkup
+
+Looks for and translates common WikiFormat markup into XHTML.
 
 =item WikiLink
 
+Looks for and translates WikiFormat links into XHTML.
+
 =item WikiHeading
+
+Translate WikiFormat heading into XHTML.
 
 =cut
 
@@ -86,7 +98,7 @@ sub InitLinkPatterns {
   my $UpperLetter = '[A-Z\xc0-\xde]';
   my $LowerLetter = '[a-z\xdf-\xff]';
   my $AnyLetter   = '[A-Za-z\xc0-\xff_0-9\$]';
-  my $AnyString   = '[A-Za-z\xc0-\xff_0-9 \-\&\'~.,\?\(\)\"!\$:]';
+  my $AnyString   = '[A-Za-z\xc0-\xff_0-9 \-\&\'~.,\?\(\)\"!\$:\/]';
 
   # Main link pattern: lowercase between uppercase, then anything
   my $LpA = $UpperLetter . $AnyLetter . "*";
@@ -158,7 +170,7 @@ sub Wiki2HTML {
         } else {
             s!^\s*$!<p>\n!;     # Blank lines become new paragraphs
         }
-        $html .= &CommonMarkup($_, $parse);
+        $html .= CommonMarkup($_, $parse);
     }
     while (@stack > 0) {             # Clear stack
         $html .= '</' . pop(@stack) . ">\n";

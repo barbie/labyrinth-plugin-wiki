@@ -1,34 +1,62 @@
-Labyrinth::Plugin::WikUser Contributed Perl DocumentLabyrinth::Plugin::Wiki(3)
-
+Labyrinth::Plugin::Wiki(3)                          Labyrinth::Plugin::Wiki(3)
 
 
 NAME
-       Labyrinth::Plugin::Wiki - Wiki handler for Labyrinth framework.
+       Labyrinth::Plugin::Wiki - Wiki handler for the Labyrinth framework.
 
 DESCRIPTION
        Contains all the wiki handling functionality for Labyrinth.
 
 PUBLIC INTERFACE METHODS
        Page
+           Checks for alternative page references and redirects if necessary.
+
        Edit
+           Provides the edit page for the given page.
+
        View
+           Provides the view page for the given page.
+
        Save
+           Saves the given page.
+
        History
+           Provides the history of edits for the given page.
+
        Diff
+           Provides the differences between to versions of the given page.
+
        Search
+           Searches through the current set of pages for the given text string.
+
        Recent
+           Lists the most recent changes.
 
 ADMIN INTERFACE METHODS
        Admin
+           Checks whether user has admin priviledges.
+
        Rollback
+           Rollbacks the given page by one version.
+
        Delete
+           Deletes the given page.
+
        Locks
+           Locks or unlocks the given page.
 
 INTERNAL METHODS
        CheckPage
+           Checks the page exists.
+
        GetPage
+           Retrieves the page content for a given version or current page.
+
        RestrictedPage
+           Checks whether the page is restricted.
+
        LockedPage
+           Checks whether the page is locked.
 
 SEE ALSO
        Labyrinth
@@ -46,4 +74,4 @@ COPYRIGHT & LICENSE
 
 
 
-perl v5.10.1                      2011-01-18        Labyrinth::Plugin::Wiki(3)
+perl v5.10.1                      2011-06-19        Labyrinth::Plugin::Wiki(3)
