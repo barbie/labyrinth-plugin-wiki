@@ -1,5 +1,10 @@
 Changes for the Labyrinth-Plugin-Wiki
 
+1.03	07/06/2012
+	- META tests no longer require specific versions.
+	- added minimum perl version (5.006).
+        - reworked Makefile.PL for clarity.
+
 1.02	19/06/2011
 	- URL pattern update to accept '/' in text alternative.
 	- update to Single/Pair balancing in XHTML.

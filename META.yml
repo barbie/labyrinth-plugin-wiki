@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                     Labyrinth::Plugin::Wiki
-version:                  1.02
+version:                  1.03
 abstract:                 Wiki plugin for the Labyrinth framework
 author:
   - Barbie <barbie@cpan.org>
@@ -10,25 +10,26 @@ distribution_type:        module
 installdirs:              site
 
 requires:
-  Labyrinth:	            5.03
-  Algorithm::Diff:        0
-  VCS::Lite:              0
+  perl:                     5.006
+  Labyrinth:                5.03
+  Algorithm::Diff:          0
+  VCS::Lite:                0
 recommends:
-  Test::More:             0.70
-  Test::Pod:              1.00
-  Test::Pod::Coverage:    0.08
-  Test::CPAN::Meta:       0.13
-  Test::JSON::Meta:       0.08
+  Test::Pod:                1.00
+  Test::Pod::Coverage:      0.08
+  Test::CPAN::Meta:         0
+  Test::CPAN::Meta::JSON:   0
 build_requires:
-  Test::More:             0.01
+  IO::File:                 0
+  Test::More:               0.70
 
 provides:
   Labyrinth::Plugin::Wiki:
     file:     lib/Labyrinth/Plugin/Wiki.pm
-    version:  1.02
+    version:  1.03
   Labyrinth::Plugin::Wiki::Text:
     file:     lib/Labyrinth/Plugin/Wiki/Text.pm
-    version:  1.02
+    version:  1.03
 
 no_index:
   directory:
