@@ -1,6 +1,7 @@
 Changes
 lib/Labyrinth/Plugin/Wiki.pm
 lib/Labyrinth/Plugin/Wiki/Text.pm
+LICENSE
 Makefile.PL
 MANIFEST
 META.json

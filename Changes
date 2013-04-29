@@ -5,6 +5,7 @@ Changes for the Labyrinth-Plugin-Wiki
         - use process_html from MLUtils rather than handcrafting.
         - upgrade to Labyrinth 5.16.
         - updated templates.
+        - added LICENSE file.
 
 1.03    2012-06-07
         - META tests no longer require specific versions.
