@@ -20,7 +20,7 @@
     <input type="radio" name="diff1" value="[% item.version %]" [% IF first %]style="visibility:hidden"[% ELSE %][% IF current == item.version + 1 %]checked="checked"[% END %][% END %] onclick="diffcheck()" />
     <input type="radio" name="diff2"  value="[% item.version %]" [% IF first %]checked="checked"[% ELSE %]style="visibility:hidden"[% END %] onclick="diffcheck()" />
     [% item.postdate %] ([% item.realname %])[% IF item.comment %] => "[% item.comment %]"[% END %] (version [% item.version %])
-    [% IF first %][% IF user.access == 5 %]<input type="submit" onclick="setRollback()" value="ROLLBACK" />[% END %][% END %]
+    [% IF first %][% IF user.access == 5 %]<input type="submit" onclick="setRollback()" value="ROLLBACK" />[% END %][% END %]</li>
 [% first = 0 %]
 [% END %]
 </ul>
