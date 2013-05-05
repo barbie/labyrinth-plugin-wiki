@@ -1,5 +1,6 @@
 Changes for the Labyrinth-Plugin-Wiki
 
+1.04    2013-05-05
         - change file dates changed to meet W3CDTF standards.
         - fixed site and link pattern matching.
         - use process_html from MLUtils rather than handcrafting.
