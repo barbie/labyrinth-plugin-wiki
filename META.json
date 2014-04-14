@@ -1,6 +1,6 @@
 {
     "name": "Labyrinth-Plugin-Wiki",
-    "version": "1.04",
+    "version": "1.05",
     "abstract": "Wiki plugin for the Labyrinth framework",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -46,11 +46,11 @@
     "provides": {
         "Labyrinth::Plugin::Wiki": {
             "file": "lib/Labyrinth/Plugin/Wiki.pm",
-            "version": "1.04"
+            "version": "1.05"
         },
         "Labyrinth::Plugin::Wiki::Text": {
             "file": "lib/Labyrinth/Plugin/Wiki/Text.pm",
-            "version": "1.04"
+            "version": "1.05"
         }
     },
     "no_index": {
