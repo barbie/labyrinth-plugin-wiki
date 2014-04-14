@@ -1,5 +1,5 @@
 --- #YAML:1.0
-name:                     Labyrinth::Plugin::Wiki
+name:                     Labyrinth-Plugin-Wiki
 version:                  1.04
 abstract:                 Wiki plugin for the Labyrinth framework
 author:
@@ -40,6 +40,7 @@ no_index:
 resources:
   license:    http://www.perlfoundation.org/artistic_license_2_0
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Labyrinth-Plugin-Wiki
+  repository: http://github.com/barbie/labyrinth-plugin-wiki
 
 meta-spec:
    version:   1.4

@@ -8,7 +8,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     AUTHOR              => 'Barbie <barbie@cpan.org>',
-    NAME                => 'Labyrinth::Plugin::Wiki',
+    NAME                => 'Labyrinth-Plugin-Wiki',
     VERSION_FROM        => 'lib/Labyrinth/Plugin/Wiki.pm',
     ABSTRACT            => 'Wiki plugin for the Labyrinth framework',
     NO_META             => 1,

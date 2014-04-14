@@ -1,5 +1,5 @@
 {
-    "name": "Labyrinth::Plugin::Wiki",
+    "name": "Labyrinth-Plugin-Wiki",
     "version": "1.04",
     "abstract": "Wiki plugin for the Labyrinth framework",
     "author": [
