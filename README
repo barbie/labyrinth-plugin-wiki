@@ -1,70 +1,41 @@
-NAME
-       Labyrinth::Plugin::Wiki - Wiki handler for the Labyrinth framework.
+Labyrinth-Plugin-Wiki
+=====================
 
-DESCRIPTION
-       Contains all the wiki handling functionality for Labyrinth.
+This distribution contains the wiki handling functionality for the Labyrinth
+Web Framework. 
 
-PUBLIC INTERFACE METHODS
-       Page
-           Checks for alternative page references and redirects if necessary.
+INSTALLATION
 
-       Edit
-           Provides the edit page for the given page.
+To install this module type the following:
 
-       View
-           Provides the view page for the given page.
+   perl Makefile.PL
+   make
+   make test
+   make install
 
-       Save
-           Saves the given page.
+DEPENDENCIES
 
-       History
-           Provides the history of edits for the given page.
+This module requires these modules:
 
-       Diff
-           Provides the differences between to versions of the given page.
+  Algorithm::Diff
+  Labyrinth
+  VCS::Lite
 
-       Search
-           Searches through the current set of pages for the given text string.
+For testing the module requires these modules:
 
-       Recent
-           Lists the most recent changes.
+  IO::File
+  Test::More
 
-ADMIN INTERFACE METHODS
-       Admin
-           Checks whether user has admin priviledges.
+For optional testing the module would like these modules:
 
-       Rollback
-           Rollbacks the given page by one version.
+  Test::CPAN::Meta
+  Test::CPAN::Meta::JSON
+  Test::Pod
+  Test::Pod::Coverage
 
-       Delete
-           Deletes the given page.
+COPYRIGHT AND LICENSE
 
-       Locks
-           Locks or unlocks the given page.
+  Copyright (C) 2008-2014 Barbie for Miss Barbell Productions
 
-INTERNAL METHODS
-       CheckPage
-           Checks the page exists.
-
-       GetPage
-           Retrieves the page content for a given version or current page.
-
-       RestrictedPage
-           Checks whether the page is restricted.
-
-       LockedPage
-           Checks whether the page is locked.
-
-SEE ALSO
-       Labyrinth
-
-AUTHOR
-       Barbie, <barbie@missbarbell.co.uk> for Miss Barbell Productions,
-       <http://www.missbarbell.co.uk/>
-
-COPYRIGHT & LICENSE
-         Copyright (C) 2008-2014 Barbie for Miss Barbell Productions
-         All Rights Reserved.
-
-         This module is free software; you can redistribute it and/or
-         modify it under the Artistic License 2.0.
+  This distribution is free software; you can redistribute it and/or
+  modify it under the Artistic Licence v2.
